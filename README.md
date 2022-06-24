@@ -1,2 +1,0 @@
-# CCcat134312.github.io
-練習用
