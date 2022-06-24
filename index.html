@@ -1,12 +1,53 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="styles.css" />
     <title>CC</title>
   </head>
   <body>
     <!--comment-->
     <h1>我太難了</h1>
-    <p>TEST</p>
-    <input type="range" min="0" max="255"> RED
+    <h1 id="pTEST">TEST</h1>
+    <input
+      type="range"
+      min="0"
+      max="255"
+      id="redSlide"
+      onchange="change(this)"
+      oninput="change(this)"
+    />
+    RED
+    <br />
+
+    <input
+      type="range"
+      min="0"
+      max="255"
+      id="greenSlide"
+      onchange="change(this)"
+      oninput="change(this)"
+    />
+    GREEN
+    <br />
+
+    <input
+      type="range"
+      min="0"
+      max="255"
+      id="blueSlide"
+      onchange="change(this)"
+      oninput="change(this)"
+    />
+    BLUE
+    <br />
   </body>
+  <script>
+    function change(element) {
+      var red = document.getElementById("redSlide").value;
+      var green = document.getElementById("greenSlide").value;
+      var blue = document.getElementById("blueSlide").value;
+      document.getElementById("pTEST").style =
+        "color:rgb(" + red + "," + green + "," + blue + ")";
+    }
+  </script>
 </html>
